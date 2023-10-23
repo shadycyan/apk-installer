@@ -23,7 +23,7 @@ abstract class ApkInstallerPlatform extends PlatformInterface {
     _instance = instance;
   }
 
-  Future<String?> getPlatformVersion() {
+  Future<void> installApk({required String filePath}) {
     throw UnimplementedError('platformVersion() has not been implemented.');
   }
 }

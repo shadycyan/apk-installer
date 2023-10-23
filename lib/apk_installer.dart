@@ -1,8 +1,7 @@
-
 import 'apk_installer_platform_interface.dart';
 
 class ApkInstaller {
-  Future<String?> getPlatformVersion() {
-    return ApkInstallerPlatform.instance.getPlatformVersion();
+  static Future<void> installApk({required String filePath}) {
+    return ApkInstallerPlatform.instance.installApk(filePath: filePath);
   }
 }

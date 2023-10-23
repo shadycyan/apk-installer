@@ -10,8 +10,7 @@ class MethodChannelApkInstaller extends ApkInstallerPlatform {
   final methodChannel = const MethodChannel('apk_installer');
 
   @override
-  Future<String?> getPlatformVersion() async {
-    final version = await methodChannel.invokeMethod<String>('getPlatformVersion');
-    return version;
+  Future<void> installApk({required String filePath}) async {
+    await methodChannel.invokeMethod('installApk', {'filePath': filePath});
   }
 }
