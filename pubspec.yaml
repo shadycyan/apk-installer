@@ -3,7 +3,7 @@ description: A Flutter plugin for easy Android APK installation,
   compatible with Android API 19 and higher.
 repository: https://github.com/shadycyan/apk_installer
 homepage: https://github.com/shadycyan/apk_installer
-version: 0.0.1
+version: 0.0.2
 
 environment:
   sdk: ">=3.1.4 <4.0.0"
