@@ -9,12 +9,12 @@ To use this plugin, add `apk_installer` as a [dependency in your pubspec.yaml fi
 
 ### Example
 ```dart
-import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:apk_installer/apk_installer.dart';
 
-final _apkFile = File('path/to/your/package.apk');
+Future<void> _installApk() async {
+  await ApkInstaller.installApk(filePath: 'path/to/your/package.apk');
+}
 
 void main() {
   runApp(
@@ -29,10 +29,6 @@ void main() {
       ),
     ),
   );
-}
-
-Future<void> _installApk() async {
-  await ApkInstaller.installApk(filePath: _apkFile.path);
 }
 ```
 

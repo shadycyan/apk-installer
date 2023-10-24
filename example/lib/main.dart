@@ -1,9 +1,9 @@
-import 'dart:io';
-
 import 'package:apk_installer/apk_installer.dart';
 import 'package:flutter/material.dart';
 
-final _apkFile = File('path/to/your/package.apk');
+Future<void> _installApk() async {
+  await ApkInstaller.installApk(filePath: 'path/to/your/package.apk');
+}
 
 void main() {
   runApp(
@@ -18,8 +18,4 @@ void main() {
       ),
     ),
   );
-}
-
-Future<void> _installApk() async {
-  await ApkInstaller.installApk(filePath: _apkFile.path);
 }
